@@ -6,10 +6,12 @@
     <title>RoboKitty</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             background-color: #f0f0f0;
+            margin: 0;
         }
         img {
             max-width: 100%;
@@ -18,8 +20,6 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to RoboKitty</h1>
-    <p>The futuristic meme coin with AI integration!</p>
-    <img src="robokitty-logo.png" alt="RoboKitty Logo">
+    <img src="robokitty_logo.png" alt="RoboKitty Logo">
 </body>
 </html>
