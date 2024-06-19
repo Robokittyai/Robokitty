@@ -3,37 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RoboKitty</title>
+    <title>RoboKitty Citadel</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('background.jpg'); /* Ensure this path is correct */
-            background-size: cover;
-            background-position: center;
-            color: #00FF00;
-            text-shadow: 1px 1px 2px #000;
+            overflow: hidden;
+            background: url('background_image.png') center center / cover no-repeat;
+        }
+
+        .main-container {
+            position: relative;
+            text-align: center;
+            color: #00FF00; /* Bright green color */
+        }
+
+        .robokitty-main {
+            width: 300px;
+            height: auto;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            animation: pulse 3s infinite;
+        }
+
+        .small-robokitty {
+            position: absolute;
+            width: 60px;
+            height: auto;
+            animation: moveKitty 10s linear infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+
+        @keyframes moveKitty {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(100px, 50px); }
+            50% { transform: translate(200px, -50px); }
+            75% { transform: translate(100px, -100px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        .laser-eye {
+            position: absolute;
+            width: 2px;
+            height: 100px;
+            background: red;
+            top: 50%;
+            left: 50%;
+            transform-origin: top;
+            animation: laser 1s infinite;
+        }
+
+        @keyframes laser {
+            0% { transform: rotate(0deg); opacity: 1; }
+            50% { transform: rotate(20deg); opacity: 0.5; }
+            100% { transform: rotate(0deg); opacity: 1; }
+        }
+
+        .currency-symbol {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            animation: burn 5s infinite;
+        }
+
+        @keyframes burn {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+            100% { opacity: 0; transform: scale(0.8); }
         }
 
         h1 {
-            font-size: 3em;
-            margin: 20px 0;
+            text-shadow: 2px 2px 4px #000;
+            z-index: 3;
+            position: relative;
         }
 
         p {
+            margin: 20px;
             font-size: 1.2em;
-            margin: 20px;
-            text-align: center;
-        }
-
-        .features, .contact {
-            margin: 20px;
-            text-align: center;
         }
 
         .social-icons {
@@ -46,14 +102,22 @@
         .social-icons img {
             width: 40px;
             height: 40px;
+            animation: spin 10s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <img src="robokitty_logo.jpg" alt="RoboKitty Logo" style="max-width: 100%; height: auto;">
-    <h1>Welcome to RoboKitty</h1>
-    <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
-    <div class="features">
+    <div class="main-container">
+        <img src="robokitty_logo.jpg" alt="RoboKitty" class="robokitty-main">
+        <div class="laser-eye" style="top: calc(20% + 50px); left: calc(50% + 30px);"></div>
+        <div class="laser-eye" style="top: calc(20% + 50px); left: calc(50% - 30px);"></div>
+        <h1>Welcome to RoboKitty Citadel</h1>
+        <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
         <h2>Features</h2>
         <ul>
             <li>AI-Driven Technology</li>
@@ -61,24 +125,17 @@
             <li>Secure and Transparent</li>
             <li>Fun and Engaging</li>
         </ul>
-    </div>
-    <div class="contact">
         <h2>Contact Us</h2>
         <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
         <div class="social-icons">
-            <a href="https://www.instagram.com/your_instagram_profile" target="_blank">
-                <img src="instagram.png" alt="Instagram">
-            </a>
-            <a href="https://t.me/your_telegram_profile" target="_blank">
-                <img src="telegram.png" alt="Telegram">
-            </a>
-            <a href="https://discord.com/invite/your_discord_profile" target="_blank">
-                <img src="discord.png" alt="Discord">
-            </a>
-            <a href="https://twitter.com/your_twitter_profile" target="_blank">
-                <img src="x.png" alt="Twitter">
-            </a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="telegram.png" alt="Telegram"></a>
+            <a href="#"><img src="discord.png" alt="Discord"></a>
+            <a href="#"><img src="x.png" alt="X (Twitter)"></a>
         </div>
     </div>
+    <img src="small_robokitty.png" alt="Small RoboKitty" class="small-robokitty" style="top: 50px; left: 50px;">
+    <img src="small_robokitty.png" alt="Small RoboKitty" class="small-robokitty" style="top: 150px; left: 150px;">
+    <img src="usd_symbol.png" alt="Burning USD" class="currency-symbol" style="top: 200px; left: 200px;">
 </body>
 </html>
