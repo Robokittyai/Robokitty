@@ -6,67 +6,63 @@
     <title>RoboKitty</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             background-color: #f0f0f0;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        header, section, footer {
-            margin-bottom: 20px;
-        }
-        header {
-            text-align: center;
-        }
-        header img {
+        img {
             max-width: 100%;
             height: auto;
         }
-        section {
-            padding: 20px 0;
-        }
-        footer {
+        .content {
             text-align: center;
-            font-size: 0.8em;
-            color: #666;
+            max-width: 600px;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="robokitty_logo.jpg" alt="RoboKitty Logo">
-            <h1>Welcome to RoboKitty</h1>
-        </header>
-        <section id="about">
-            <h2>About RoboKitty</h2>
-            <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
-        </section>
-        <section id="features">
-            <h2>Features</h2>
-            <ul>
-                <li>AI-Driven Technology</li>
-                <li>Community-Focused</li>
-                <li>Secure and Transparent</li>
-                <li>Fun and Engaging</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
-        </section>
-        <footer>
-            <p>&copy; 2024 RoboKitty. All rights reserved.</p>
-        </footer>
+    <img src="robokitty_logo.jpg" alt="RoboKitty Logo">
+    <div class="content">
+        <h1>Welcome to RoboKitty</h1>
+        <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
+        <h2>Features</h2>
+        <ul>
+            <li>AI-Driven Technology</li>
+            <li>Community-Focused</li>
+            <li>Secure and Transparent</li>
+            <li>Fun and Engaging</li>
+        </ul>
+        <h2>Contact Us</h2>
+        <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
+        <button class="button" onclick="showAlert()">Click Me</button>
     </div>
+    <script>
+        function showAlert() {
+            alert('Hello! Welcome to RoboKitty.');
+        }
+    </script>
+    <footer>&copy; 2024 RoboKitty. All rights reserved.</footer>
 </body>
 </html>
+
 
 
 
