@@ -1,13 +1,3 @@
-
-# Save and exit the editor, then add the change
-git add index.html
-
-# Commit the change with a message
-git commit -m "Trigger redeployment"
-
-# Push the change to GitHub
-git push -u origin main
-X+y
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,30 +15,37 @@ X+y
             font-family: Arial, sans-serif;
             background-image: url('background_image.png'); /* Ensure this path is correct */
             background-size: cover;
-            color: #00ff00;
+            background-position: center;
+            color: #00FF00;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px;
             text-align: center;
         }
-        h1 {
-            font-size: 4em;
-            text-shadow: 2px 2px 5px #000;
+
+        .features, .contact {
+            margin: 20px;
+            text-align: center;
         }
-        p {
-            font-size: 1.5em;
-            max-width: 80%;
-            margin-bottom: 20px;
-        }
+
         .social-icons {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
         }
+
         .social-icons img {
-            width: 60px; /* Adjust size as needed */
-            height: 60px; /* Adjust size as needed */
-        }
-        .features, .contact {
-            margin: 20px;
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
@@ -68,12 +65,20 @@ X+y
     <div class="contact">
         <h2>Contact Us</h2>
         <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
-    </div>
-    <div class="social-icons">
-        <a href="#"><img src="instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="telegram.png" alt="Telegram"></a>
-        <a href="#"><img src="discord.png" alt="Discord"></a>
-        <a href="#"><img src="x.png" alt="X (Twitter)"></a>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/your_instagram_profile" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://t.me/your_telegram_profile" target="_blank">
+                <img src="telegram.png" alt="Telegram">
+            </a>
+            <a href="https://discord.com/invite/your_discord_profile" target="_blank">
+                <img src="discord.png" alt="Discord">
+            </a>
+            <a href="https://twitter.com/your_twitter_profile" target="_blank">
+                <img src="x.png" alt="Twitter">
+            </a>
+        </div>
     </div>
 </body>
 </html>
