@@ -1,0 +1,21 @@
+.DS_Store
+index.html.rtf
+git commit -m "Add .DS_Store and index.html.rtf to .gitignore"
+git push -u origin main
+git add .gitignore
+git commit -m "Add .DS_Store and index.html.rtf to .gitignore"
+git push -u origin main
+git add .gitignore
+git commit -m "Add .DS_Store and index.html.rtf to .gitignore"
+git push -u origin main
+echo ".DS_Store" >> .gitignore
+echo "index.html.rtf" >> .gitignore
+git add .gitignore
+git commit -m "Add .DS_Store and index.html.rtf to .gitignore"
+git push -u origin main
+echo ".DS_Store" >> .gitignore
+echo "index.html.rtf" >> .gitignore
+git add .gitignore
+git commit -m "Add .DS_Store and index.html.rtf to .gitignore"
+git push -u origin main
+
