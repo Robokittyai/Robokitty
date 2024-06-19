@@ -6,41 +6,26 @@
     <title>RoboKitty</title>
     <style>
         body {
-<<<<<<< HEAD
-            background-color: black;
-            color: #00FF00;
-=======
-            background: url('background.jpg') no-repeat center center fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background_image.png'); /* Ensure this path is correct */
             background-size: cover;
             color: #00ff00;
->>>>>>> 063b0d3 (Enhance layout and design with new background)
-            font-family: 'Courier New', Courier, monospace;
             text-align: center;
-            margin: 0;
         }
-<<<<<<< HEAD
-        .matrix-bg {
-            background: url('matrix-background.png') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
+        h1 {
+            font-size: 4em;
+            text-shadow: 2px 2px 5px #000;
         }
-        .header {
-            padding: 20px;
-        }
-        .features, .contact {
-            text-align: left;
-            margin: 0 auto;
-            width: 50%;
-        }
-        .features ul, .contact ul {
-            list-style-type: none;
-            padding: 0;
-=======
-        .features {
-            text-align: left;
-            margin: 0 auto;
-            width: 50%;
->>>>>>> 063b0d3 (Enhance layout and design with new background)
+        p {
+            font-size: 1.5em;
+            max-width: 80%;
+            margin-bottom: 20px;
         }
         .social-icons {
             display: flex;
@@ -49,27 +34,18 @@
             margin-top: 20px;
         }
         .social-icons img {
-            width: 40px;
-            height: 40px;
+            width: 60px; /* Adjust size as needed */
+            height: 60px; /* Adjust size as needed */
         }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .contact {
-            margin-bottom: 20px;
+        .features, .contact {
+            margin: 20px;
         }
     </style>
-<<<<<<< HEAD
 </head>
-<body class="matrix-bg">
-    <div class="header">
-        <img src="robokitty_logo.jpg" alt="RoboKitty Logo">
-        <h1>Welcome to RoboKitty</h1>
-    </div>
-    <div class="intro">
-        <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
-    </div>
+<body>
+    <img src="robokitty_logo.jpg" alt="RoboKitty Logo" style="max-width: 100%; height: auto;">
+    <h1>Welcome to RoboKitty</h1>
+    <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
     <div class="features">
         <h2>Features</h2>
         <ul>
@@ -82,63 +58,12 @@
     <div class="contact">
         <h2>Contact Us</h2>
         <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/your_instagram_profile" target="_blank">
-                <img src="instagram.png" alt="Instagram">
-            </a>
-            <a href="https://t.me/your_telegram_profile" target="_blank">
-                <img src="telegram.png" alt="Telegram">
-            </a>
-            <a href="https://discord.com/your_discord_profile" target="_blank">
-                <img src="discord.png" alt="Discord">
-            </a>
-            <a href="https://twitter.com/your_x_profile" target="_blank">
-                <img src="x.png" alt="X (Twitter)">
-            </a>
-        </div>
     </div>
-    <button class="button" onclick="handleClick()">Click Me</button>
-    <footer>
-        <p>&copy; 2024 RoboKitty. All rights reserved.</p>
-    </footer>
-=======
->>>>>>> 063b0d3 (Enhance layout and design with new background)
-    <script>
-        function handleClick() {
-            alert('Button Clicked!');
-        }
-    </script>
-</head>
-<body>
-    <img src="robokitty_logo.jpg" alt="RoboKitty Logo">
-    <h1>Welcome to RoboKitty</h1>
-    <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
-    <h2>Features</h2>
-    <ul class="features">
-        <li>AI-Driven Technology</li>
-        <li>Community-Focused</li>
-        <li>Secure and Transparent</li>
-        <li>Fun and Engaging</li>
-    </ul>
-    <h2>Contact Us</h2>
-    <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
     <div class="social-icons">
-        <a href="https://www.instagram.com/your_instagram_profile" target="_blank">
-            <img src="instagram.png" alt="Instagram">
-        </a>
-        <a href="https://t.me/your_telegram_profile" target="_blank">
-            <img src="telegram.png" alt="Telegram">
-        </a>
-        <a href="https://discord.com/your_discord_profile" target="_blank">
-            <img src="discord.png" alt="Discord">
-        </a>
-        <a href="https://twitter.com/your_x_profile" target="_blank">
-            <img src="x.png" alt="Twitter">
-        </a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="telegram.png" alt="Telegram"></a>
+        <a href="#"><img src="discord.png" alt="Discord"></a>
+        <a href="#"><img src="x.png" alt="X (Twitter)"></a>
     </div>
-    <button class="button" onclick="handleClick()">Click Me</button>
-    <footer>
-        © 2024 RoboKitty. All rights reserved.
-    </footer>
 </body>
 </html>
