@@ -1,71 +1,65 @@
 body {
+    background-color: black;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('realistic_background.png') no-repeat center center fixed;
-    background-size: cover;
-    color: #00ff00;
+    color: #ADD8E6; /* Light blue */
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    color: #ADD8E6; /* Light blue */
     text-align: center;
 }
 
-.container {
-    background: rgba(0, 0, 0, 0.8);
+p, a {
+    color: #ADD8E6; /* Light blue */
+    text-align: center;
+}
+
+#content {
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
-    display: inline-block;
-    margin-top: 50px;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 1.2em;
-    margin-bottom: 15px;
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 200px;
 }
 
 ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
-.contact-icons img {
+#socials {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#socials img {
     width: 40px;
+    height: 40px;
     margin: 0 10px;
-    transition: transform 0.3s;
 }
 
-.contact-icons img:hover {
-    transform: scale(1.1);
-}
-
-#robokitty-logo {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-    animation: blink-animation 1.5s infinite;
-}
-
-@keyframes blink-animation {
-    0% {
-        filter: brightness(1);
-    }
-    50% {
-        filter: brightness(1.5);
-    }
-    100% {
-        filter: brightness(1);
-    }
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
 }
