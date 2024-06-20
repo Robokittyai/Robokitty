@@ -34,62 +34,30 @@ body {
 }
 
 h1, h2 {
-    color: #ffda00;
+    color: #ffd400;
 }
 
-.gold-text {
-    color: #ffda00;
-}
-
-.lightblue-text {
+p {
     color: #00bfff;
 }
 
-.info-box {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    color: #00bfff;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
-    width: 80%;
-    max-width: 800px;
-    text-align: left;
 }
 
 .social-icons img {
     width: 40px;
-    height: auto;
-    margin: 10px;
-    filter: brightness(0) invert(1);
+    height: 40px;
 }
-
-.social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-    transition: transform 0.3s;
-}
-
-.social-icons a:hover {
-    transform: scale(1.2);
-}
-
-/* Matrix animation */
-@keyframes matrix {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-.matrix-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8AAAAAAADr6+t8fHyt7e3n5+dXV1dvq6s1NTU6OjpycnKnp6fX19eTk5Onp6fW1taioqKOjo6SkpLKysqbm5u2trZiYmIdHR2SkpI+Pj5paWlp6enT09OBgYHHx8ebm5tSUlJiYmKmppaGhoY5OTl4eHiEhIQAAC0AAAB9HR3MAAAIxElEQVR4nO2da3OiMBCFZQpLghhHKyvB+f9v7Qa3GIAgAhjV4z+PZbY+khCks2eE0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMDl9HJtUqu7XGpNSivmSXW8ivHdcvvJ+To4PYrnK4xsWNTOSmktbVbsJlHr3eCwW53cnk9Bke1cujzoY2DsYxsuTbVOy5bgYIilzSOVu7pzpPHQ7GnlMubj7uJ9Nhk51IytHWxrPKwu6ZTOnIjrfyGQpQheTgL7drIVuSdmrfVYidkI2mpcPMutHVcdiyBmuY5iRzuDNYN+XtMRxGNE9gZdGtlLb9y3nWZcs0HbZIRn3TXYsRPak/h+PUzZmBvRY2W+2vKsaVNqJ2hr/Rs9LeLNl+oT0EX/U3Qky3I+UR+xE9vO3Na5Hg5VV6Bd0TprC34r5Zc+TzTOyyxv2kc9YeTX9V6I6GRbXt8Mj7NMX5Iu91PZxH4l4FOnhr9El6vB5c4uVGqOL5fLwpnWvk23Ewzb8nPSMOzWhDdTffRaGrxubW0xn5m0kBfqH7oXZmbk5asNBbdCixFcz8wPRssfaZdRGfA8mjCVOcGHdjRP87oN1bo6BeN7lnsTn0mNRmz1Y2Pwv4EZjVRHwJuJc3I7FaEmeVbo9IT5Fs5hvsJ3Yw+L4YHLdrsbzP68luRtOR7bHrtTcF+O2xnUsiZJzFbW1N5MsFfRlt2w+GRaER2v2mrBvF3EXpc7euV+OnBd0sc1fY2ueFdI8hB3TRtzuMsHyQ4ndEtfP2GEzX6yHZffK7kTZzVRHy8t1Jc4bc9FxqkbQzSYTbNkwY3qd5oO5ZYh2+zWuMbPbMO8Xk+tpQauuUO2iLfZXbsJw49N82WVmmOBaMlcZ3L07TOxtFGt2HzRvt2p7I26unvTg0ZvcKfy+WDLWN6FbI3psR5PtQ3US7NJv1g4lK2l2HNck/j7rNGcWvXG7Rt06+rjfqYfHpoYY/oz0nPaeq62g9i82XwaeFnU/W3nF1if8YN4ZP2n/golHZ2P9Q0zto2zeMS9zUbj9OacNqNQ/aToZjOoX7G5dUyxaebRQm1x0+9ZdOfqYu1HdHba9yQ9HhN3a8/fqx8U32RaaYY22rzr8v2F7nTiTbPrquHOh+xzXXtiXc2v2hr5+g7OHk++ptMufmXvXvgPRlx5M23Vh4ukmcd2bmJ9Sz6+G6yI/Y/SsZ7ZlEzE+WTuDkvkljt6rb+bk90S76oPrBctItG+FXfujGfi13r2j91zNV/vuG9euhHbZNk8fi/q3yrPz5OS/R9W9G0h/3Sg2MS+b6i3j+d9nblMfqNd8cdLXgHf2mOz3P/q5XoMY29d9XuM+dXHtdHzrFftPN/mUzdrH+eO3Mb9t/uFfq+lfF+H+7/Yy+eC2nb9laNcc3rOfqeRxrNfpyNdy8p3K/Z2N+tfpbuTr2duJfwg+7zEP0x69+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANgF+bw3gnGhhEQAAAABJRU5ErkJggg==) repeat-y center center;
-    animation: matrix 1s linear infinite;
-    opacity: 0.5;
-}
-
-
-
