@@ -4,55 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoboKitty</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('realistic_background.png');
+            color: #00FF00; /* Green text for matrix theme */
+            background: url('realistic_background.png') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            text-align: center;
             margin: 0;
             padding: 0;
-            color: #00FF00;
         }
-        .container {
-            text-align: center;
+        header {
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            margin: 20px;
-            border-radius: 10px;
+            font-size: 2em;
+            font-weight: bold;
         }
-        .main-image {
-            width: 300px;
-            height: auto;
-            margin: 20px auto;
+        main {
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.7);
         }
         .features, .contact {
-            margin-top: 20px;
+            margin: 20px auto;
+            width: 80%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 0.9em;
         }
         .social-icons img {
             width: 50px;
-            margin: 0 10px;
+            margin: 10px;
         }
-        .small-robokitty {
+        .animated-kitty {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
             width: 100px;
-            height: auto;
-            position: absolute;
-            animation: moveKitty 5s linear infinite;
+            animation: moveKitty 5s infinite alternate;
         }
         @keyframes moveKitty {
-            0% { left: 0; top: 0; }
-            25% { left: 80%; top: 10%; }
-            50% { left: 40%; top: 80%; }
-            75% { left: 70%; top: 50%; }
-            100% { left: 0; top: 0; }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(200px); }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>Welcome to RoboKitty</header>
+    <main>
+        <img src="robokitty_logo.jpg" alt="RoboKitty Logo" style="max-width: 200px;">
         <h1>Welcome to RoboKitty</h1>
-        <img src="robokitty_logo.jpg" alt="RoboKitty Logo" class="main-image">
         <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
         <div class="features">
             <h2>Features</h2>
@@ -65,15 +71,16 @@
         </div>
         <div class="contact">
             <h2>Contact Us</h2>
-            <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com" style="color: #00FF00;">robokitty@tutamail.com</a></p>
+            <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a></p>
             <div class="social-icons">
                 <a href="#"><img src="instagram.png" alt="Instagram"></a>
                 <a href="#"><img src="telegram.png" alt="Telegram"></a>
                 <a href="#"><img src="discord.png" alt="Discord"></a>
-                <a href="#"><img src="x.png" alt="X (Twitter)"></a>
+                <a href="#"><img src="x.png" alt="Twitter"></a>
             </div>
         </div>
-    </div>
-    <img src="small_robokitty.png" alt="Small RoboKitty" class="small-robokitty">
+    </main>
+    <footer>&copy; 2024 RoboKitty. All rights reserved.</footer>
+    <img src="small_robokitty.png" alt="Small RoboKitty" class="animated-kitty">
 </body>
 </html>
