@@ -4,61 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoboKitty</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            color: #00FF00; /* Green text for matrix theme */
-            background: url('realistic_background.png') no-repeat center center fixed;
-            background-size: cover;
-            text-align: center;
             margin: 0;
             padding: 0;
+            background: url('realistic_background.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #00ff00;
+            text-align: center;
         }
-        header {
-            background: rgba(0, 0, 0, 0.8);
+        .container {
             padding: 20px;
-            font-size: 2em;
-            font-weight: bold;
-        }
-        main {
-            padding: 50px 20px;
             background: rgba(0, 0, 0, 0.7);
-        }
-        .features, .contact {
-            margin: 20px auto;
-            width: 80%;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
+            margin: 20px;
             border-radius: 10px;
         }
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            font-size: 0.9em;
+        .robokitty {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: auto;
+            border: none;
         }
-        .social-icons img {
+        .small-robokitty, .usd-symbol {
             width: 50px;
-            margin: 10px;
+            height: auto;
+            border: none;
+            position: absolute;
+            animation: float 3s ease-in-out infinite;
         }
-        .animated-kitty {
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
-            width: 100px;
-            animation: moveKitty 5s infinite alternate;
+        .small-robokitty {
+            bottom: 100px;
+            left: 20px;
         }
-        @keyframes moveKitty {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(200px); }
+        .usd-symbol {
+            bottom: 100px;
+            right: 20px;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .laser-eye {
+            position: relative;
+            display: inline-block;
+        }
+        .laser-eye::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 100px;
+            background: red;
+            transform: rotate(45deg);
+            animation: laser 0.5s infinite;
+        }
+        @keyframes laser {
+            0%, 100% {
+                height: 100px;
+                opacity: 1;
+            }
+            50% {
+                height: 50px;
+                opacity: 0.5;
+            }
+        }
+        .footer {
+            margin-top: 20px;
+            color: #00ff00;
         }
     </style>
 </head>
 <body>
-    <header>Welcome to RoboKitty</header>
-    <main>
-        <img src="robokitty_logo.jpg" alt="RoboKitty Logo" style="max-width: 200px;">
+    <div class="container">
         <h1>Welcome to RoboKitty</h1>
+        <div class="laser-eye">
+            <img src="robokitty_logo.jpg" alt="RoboKitty" class="robokitty">
+        </div>
         <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
         <div class="features">
             <h2>Features</h2>
@@ -72,15 +101,18 @@
         <div class="contact">
             <h2>Contact Us</h2>
             <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a></p>
-            <div class="social-icons">
+            <div>
                 <a href="#"><img src="instagram.png" alt="Instagram"></a>
                 <a href="#"><img src="telegram.png" alt="Telegram"></a>
                 <a href="#"><img src="discord.png" alt="Discord"></a>
-                <a href="#"><img src="x.png" alt="Twitter"></a>
+                <a href="#"><img src="x.png" alt="X (Twitter)"></a>
             </div>
         </div>
-    </main>
-    <footer>&copy; 2024 RoboKitty. All rights reserved.</footer>
-    <img src="small_robokitty.png" alt="Small RoboKitty" class="animated-kitty">
+        <div class="footer">
+            <p>&copy; 2024 RoboKitty, All rights reserved.</p>
+        </div>
+    </div>
+    <img src="small_robokitty.png" alt="Small RoboKitty" class="small-robokitty">
+    <img src="usd_symbol.png" alt="USD Symbol" class="usd-symbol">
 </body>
 </html>
