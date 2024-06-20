@@ -1,70 +1,37 @@
 body {
     font-family: Arial, sans-serif;
-    color: #00ff00;
-    background: url('matrix_background.gif') no-repeat center center fixed;
+    background: black url('realistic_background.png') no-repeat center center fixed;
     background-size: cover;
-    margin: 0;
-    padding: 0;
-}
-
-header {
+    color: green;
     text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
 }
 
-h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-main {
+header, main, footer {
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    margin: 20px;
     border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
-section {
-    margin-bottom: 20px;
+header h1 {
+    font-size: 3em;
 }
 
-#robokitty-intro img.animated {
-    display: block;
-    margin: 0 auto;
-    width: 150px;
-    animation: blink 2s infinite;
+main section {
+    margin: 20px 0;
 }
 
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+main h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-.features ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.features ul li {
-    margin: 5px 0;
-}
-
-.contact .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.contact .social-icons a img {
+#social-media img {
     width: 40px;
+    margin: 0 10px;
 }
 
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    font-size: 0.8em;
 }
