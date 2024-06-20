@@ -8,87 +8,80 @@
         body {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
             background: url('realistic_background.png') no-repeat center center fixed;
             background-size: cover;
-            font-family: Arial, sans-serif;
-            color: #00ff00;
-            text-align: center;
+            color: #00FF00;
+            overflow: hidden;
         }
         .container {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            margin: 20px;
-            border-radius: 10px;
+            text-align: center;
+            padding-top: 50px;
         }
-        .robokitty {
-            display: block;
-            margin: 0 auto;
+        .header, .features, .contact {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        .header img {
             width: 200px;
             height: auto;
-            border: none;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
         }
-        .small-robokitty, .usd-symbol {
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 10px #00FF00;
+            }
+            50% {
+                box-shadow: 0 0 20px #00FF00;
+            }
+            100% {
+                box-shadow: 0 0 10px #00FF00;
+            }
+        }
+        .features, .contact {
+            color: #00FF00;
+        }
+        .social-icons img {
             width: 50px;
-            height: auto;
-            border: none;
-            position: absolute;
-            animation: float 3s ease-in-out infinite;
+            height: 50px;
+            margin: 10px;
+            transition: transform 0.3s;
         }
-        .small-robokitty {
-            bottom: 100px;
-            left: 20px;
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+        .small-kitty {
+            position: absolute;
+            width: 100px;
+            animation: move 5s infinite;
         }
         .usd-symbol {
-            bottom: 100px;
-            right: 20px;
-        }
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-        .laser-eye {
-            position: relative;
-            display: inline-block;
-        }
-        .laser-eye::after {
-            content: '';
-            display: block;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 2px;
-            height: 100px;
-            background: red;
-            transform: rotate(45deg);
-            animation: laser 0.5s infinite;
+            width: 100px;
+            bottom: 10px;
+            right: 10px;
+            animation: bounce 2s infinite;
         }
-        @keyframes laser {
-            0%, 100% {
-                height: 100px;
-                opacity: 1;
-            }
-            50% {
-                height: 50px;
-                opacity: 0.5;
-            }
+        @keyframes move {
+            0% { left: 0; }
+            50% { left: 50%; }
+            100% { left: 100%; }
         }
-        .footer {
-            margin-top: 20px;
-            color: #00ff00;
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to RoboKitty</h1>
-        <div class="laser-eye">
-            <img src="robokitty_logo.jpg" alt="RoboKitty" class="robokitty">
+        <div class="header">
+            <h1>Welcome to RoboKitty</h1>
+            <img src="robokitty_logo.jpg" alt="RoboKitty">
         </div>
-        <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
         <div class="features">
             <h2>Features</h2>
             <ul>
@@ -100,19 +93,16 @@
         </div>
         <div class="contact">
             <h2>Contact Us</h2>
-            <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a></p>
-            <div>
-                <a href="#"><img src="instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="telegram.png" alt="Telegram"></a>
-                <a href="#"><img src="discord.png" alt="Discord"></a>
-                <a href="#"><img src="x.png" alt="X (Twitter)"></a>
+            <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com" style="color: #00FF00;">robokitty@tutamail.com</a>.</p>
+            <div class="social-icons">
+                <img src="instagram.png" alt="Instagram">
+                <img src="telegram.png" alt="Telegram">
+                <img src="discord.png" alt="Discord">
+                <img src="x.png" alt="X">
             </div>
         </div>
-        <div class="footer">
-            <p>&copy; 2024 RoboKitty, All rights reserved.</p>
-        </div>
     </div>
-    <img src="small_robokitty.png" alt="Small RoboKitty" class="small-robokitty">
-    <img src="usd_symbol.png" alt="USD Symbol" class="usd-symbol">
+    <img src="small_robokitty.png" class="small-kitty" alt="Small RoboKitty">
+    <img src="usd_symbol.png" class="usd-symbol" alt="USD Symbol">
 </body>
 </html>
