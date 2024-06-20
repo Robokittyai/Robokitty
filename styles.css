@@ -68,24 +68,23 @@ footer {
     background: rgba(0, 0, 0, 0.7);
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
 
-.footer-social-icons {
+.footer-social-icons img {
+    width: 20px;
+    height: auto;
+    margin: 5px;
+    display: inline-block;
+}
+
+.footer-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
-}
-
-.footer-social-icons a {
-    margin: 0 10px;
-}
-
-footer p {
-    margin: 0;
-    color: white;
+    align-items: center;
+    flex-direction: column;
 }
 
 
