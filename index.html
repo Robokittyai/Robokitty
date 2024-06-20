@@ -7,81 +7,52 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
             background: url('realistic_background.png') no-repeat center center fixed;
             background-size: cover;
             color: #00FF00;
-            overflow: hidden;
         }
-        .container {
+        header {
             text-align: center;
-            padding-top: 50px;
-        }
-        .header, .features, .contact {
-            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            border-radius: 10px;
-            margin: 20px;
         }
-        .header img {
-            width: 200px;
-            height: auto;
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .content img {
             border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 10px #00FF00;
-            }
-            50% {
-                box-shadow: 0 0 20px #00FF00;
-            }
-            100% {
-                box-shadow: 0 0 10px #00FF00;
-            }
+            max-width: 100px;
         }
         .features, .contact {
-            color: #00FF00;
+            margin: 40px 0;
         }
-        .social-icons img {
-            width: 50px;
-            height: 50px;
-            margin: 10px;
-            transition: transform 0.3s;
+        .contact img {
+            max-width: 50px;
+            margin: 0 10px;
         }
-        .social-icons img:hover {
-            transform: scale(1.2);
-        }
-        .small-kitty {
-            position: absolute;
-            width: 100px;
+        .moving-elements {
+            position: relative;
             animation: move 5s infinite;
         }
-        .usd-symbol {
-            position: absolute;
-            width: 100px;
-            bottom: 10px;
-            right: 10px;
-            animation: bounce 2s infinite;
-        }
         @keyframes move {
-            0% { left: 0; }
-            50% { left: 50%; }
-            100% { left: 100%; }
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+            0% { left: 0; top: 0; }
+            25% { left: 50px; top: -50px; }
+            50% { left: 0; top: 50px; }
+            75% { left: -50px; top: -50px; }
+            100% { left: 0; top: 0; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Welcome to RoboKitty</h1>
-            <img src="robokitty_logo.jpg" alt="RoboKitty">
-        </div>
+    <header>
+        <h1>Welcome to RoboKitty</h1>
+        <img src="robokitty_logo.jpg" alt="RoboKitty Logo" class="moving-elements">
+    </header>
+    <div class="content">
+        <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
         <div class="features">
             <h2>Features</h2>
             <ul>
@@ -93,16 +64,23 @@
         </div>
         <div class="contact">
             <h2>Contact Us</h2>
-            <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com" style="color: #00FF00;">robokitty@tutamail.com</a>.</p>
-            <div class="social-icons">
-                <img src="instagram.png" alt="Instagram">
-                <img src="telegram.png" alt="Telegram">
-                <img src="discord.png" alt="Discord">
-                <img src="x.png" alt="X">
+            <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
+            <div>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="discord.png" alt="Discord"></a>
+                <a href="#"><img src="x.png" alt="Twitter"></a>
             </div>
         </div>
     </div>
-    <img src="small_robokitty.png" class="small-kitty" alt="Small RoboKitty">
-    <img src="usd_symbol.png" class="usd-symbol" alt="USD Symbol">
+    <div class="moving-elements" style="position: absolute; bottom: 10px; left: 10px;">
+        <img src="small_robokitty.png" alt="Small RoboKitty">
+    </div>
+    <div class="moving-elements" style="position: absolute; bottom: 10px; right: 10px;">
+        <img src="usd_symbol.png" alt="USD Symbol">
+    </div>
+    <footer style="text-align: center; padding: 20px; font-size: 0.8em;">
+        &copy; 2024 RoboKitty, All rights reserved.
+    </footer>
 </body>
 </html>
