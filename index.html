@@ -6,58 +6,96 @@
     <title>RoboKitty</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
             background: url('realistic_background.png') no-repeat center center fixed;
             background-size: cover;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: limegreen;
+            color: #00ff00;
         }
         h1 {
-            text-shadow: 2px 2px 5px black;
+            font-size: 3em;
+            text-shadow: 2px 2px 5px #000000;
+            margin-bottom: 20px;
         }
         .content {
-            margin: 50px auto;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
-            width: 80%;
         }
-        .small-robokitty {
+        .features, .contact {
+            margin: 20px 0;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+        }
+        #main-robokitty {
+            position: relative;
+            width: 300px;
+            height: auto;
+            margin: 20px 0;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #00ff00;
+            }
+            to {
+                box-shadow: 0 0 20px #ff00ff;
+            }
+        }
+        #small-robokitty {
             position: absolute;
             width: 100px;
-            height: 100px;
+            height: auto;
             animation: move 5s infinite;
         }
         @keyframes move {
-            0% { top: 10%; left: 10%; }
-            25% { top: 10%; left: 80%; }
-            50% { top: 80%; left: 80%; }
-            75% { top: 80%; left: 10%; }
-            100% { top: 10%; left: 10%; }
+            0% { left: 0; top: 0; }
+            25% { left: 80%; top: 0; }
+            50% { left: 80%; top: 80%; }
+            75% { left: 0; top: 80%; }
+            100% { left: 0; top: 0; }
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <img src="robokitty_logo.jpg" alt="RoboKitty Logo" style="max-width: 100%; height: auto;">
         <h1>Welcome to RoboKitty</h1>
         <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
-        <h2>Features</h2>
-        <ul>
-            <li>AI-Driven Technology</li>
-            <li>Community-Focused</li>
-            <li>Secure and Transparent</li>
-            <li>Fun and Engaging</li>
-        </ul>
-        <h2>Contact Us</h2>
-        <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a></p>
+        <img id="main-robokitty" src="robokitty_logo.jpg" alt="RoboKitty">
+        <div class="features">
+            <h2>Features</h2>
+            <ul>
+                <li>AI-Driven Technology</li>
+                <li>Community-Focused</li>
+                <li>Secure and Transparent</li>
+                <li>Fun and Engaging</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
+        </div>
         <div class="social-icons">
             <a href="#"><img src="instagram.png" alt="Instagram"></a>
             <a href="#"><img src="telegram.png" alt="Telegram"></a>
             <a href="#"><img src="discord.png" alt="Discord"></a>
-            <a href="#"><img src="x.png" alt="Twitter"></a>
+            <a href="#"><img src="x.png" alt="X"></a>
         </div>
     </div>
-    <img src="small_robokitty.png" alt="Small RoboKitty" class="small-robokitty">
+    <img id="small-robokitty" src="small_robokitty.png" alt="Small RoboKitty">
 </body>
 </html>
