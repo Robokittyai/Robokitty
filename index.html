@@ -3,64 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RoboKitty</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: url('realistic_background.png') no-repeat center center fixed;
-            background-size: cover;
-            color: #00ff00;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 80%;
-            max-width: 800px;
-        }
-        .logo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            animation: blink 3s infinite;
-        }
-        @keyframes blink {
-            0%, 100% { box-shadow: 0 0 10px 10px green; }
-            50% { box-shadow: 0 0 5px 5px green; }
-        }
-        h1, h2, h3, p, ul {
-            margin-bottom: 20px;
-        }
-        .social-icons img {
-            width: 50px;
-            height: 50px;
-            margin: 0 10px;
-        }
-        .social-icons a {
-            display: inline-block;
-        }
-        footer {
-            margin-top: 20px;
-            color: #ffffff;
-        }
-    </style>
+    <title>RoboKitty - AI-Driven Meme Coin</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <img src="small_robokitty.png" alt="RoboKitty Logo" class="logo">
+    <header>
         <h1>Welcome to RoboKitty</h1>
         <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies.</p>
-        <div class="about">
+    </header>
+    <main>
+        <section id="robokitty-intro">
+            <img src="robokitty_logo.jpg" alt="RoboKitty" class="animated">
+        </section>
+        <section id="about">
             <h2>About RoboKitty</h2>
-            <p>Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
-        </div>
-        <div class="features">
+            <p>Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community.</p>
+            <p>It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
+        </section>
+        <section id="features">
             <h2>Features</h2>
             <ul>
                 <li>AI-Driven Technology</li>
@@ -68,20 +28,21 @@
                 <li>Secure and Transparent</li>
                 <li>Fun and Engaging</li>
             </ul>
-        </div>
-        <div class="contact">
+        </section>
+        <section id="contact">
             <h2>Contact Us</h2>
             <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
             <div class="social-icons">
-                <a href="https://instagram.com"><img src="insta_icon.png" alt="Instagram"></a>
-                <a href="https://telegram.org"><img src="telegram_icon.png" alt="Telegram"></a>
-                <a href="https://discord.com"><img src="discord_icon.png" alt="Discord"></a>
-                <a href="https://twitter.com"><img src="twitter_icon.png" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="instagram_icon.png" alt="Instagram"></a>
+                <a href="https://telegram.org" target="_blank"><img src="telegram_icon.png" alt="Telegram"></a>
+                <a href="https://discord.com" target="_blank"><img src="discord_icon.png" alt="Discord"></a>
+                <a href="https://twitter.com" target="_blank"><img src="twitter_icon.png" alt="Twitter"></a>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
     <footer>
-        &copy; 2024 RoboKitty. All rights reserved.
+        <p>© 2024 RoboKitty. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
