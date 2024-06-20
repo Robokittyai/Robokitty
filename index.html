@@ -1,102 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RoboKitty</title>
-  <style>
-    /* Glow effect for RoboKitty */
-    .robokitty-img {
-      position: relative;
-      animation: blink-animation 1.5s infinite;
-    }
-
-    .robokitty-img img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 5px solid #fff;
-      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
-    }
-
-    /* Blink animation */
-    @keyframes blink-animation {
-      0%, 100% {
-        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
-      }
-      50% {
-        box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), 0 0 10px rgba(0, 255, 0, 0.2), 0 0 15px rgba(0, 255, 0, 0.2), 0 0 20px rgba(0, 255, 0, 0.2);
-      }
-    }
-
-    /* Matrix animation */
-    @keyframes matrix-fall {
-      0% {
-        transform: translateY(-100%);
-      }
-      100% {
-        transform: translateY(100%);
-      }
-    }
-
-    .matrix-bg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url('realistic_background.png') no-repeat center center fixed;
-      background-size: cover;
-      animation: matrix-fall 10s linear infinite;
-    }
-
-    /* Small RoboKitty animation */
-    @keyframes move {
-      0% {
-        transform: translateX(0);
-      }
-      50% {
-        transform: translateX(50px);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    .small-robokitty {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      animation: move 5s linear infinite;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboKitty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('realistic_background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #00FF00;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            margin: 0 auto;
+            max-width: 900px;
+        }
+        .header {
+            padding: 20px;
+        }
+        .header img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        .header h1 {
+            margin: 20px 0 10px;
+            font-size: 2.5em;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            margin: 20px 0 10px;
+            font-size: 2em;
+        }
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .features, .contact {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            margin: 20px 0;
+        }
+        .features h3, .contact h3 {
+            margin-bottom: 10px;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .social-icons img {
+            width: 50px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+        .footer {
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+    </style>
 </head>
 <body>
-  <div class="matrix-bg"></div>
-  <div class="content">
-    <div class="robokitty-img">
-      <img src="robokitty_logo.jpg" alt="RoboKitty">
+    <div class="container">
+        <div class="header">
+            <img src="robokitty_logo.jpg" alt="RoboKitty Logo">
+            <h1>Welcome to RoboKitty</h1>
+            <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies.</p>
+        </div>
+        <div class="content">
+            <h2>About RoboKitty</h2>
+            <p>Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
+        </div>
+        <div class="features">
+            <h3>Features</h3>
+            <ul>
+                <li>AI-Driven Technology</li>
+                <li>Community-Focused</li>
+                <li>Secure and Transparent</li>
+                <li>Fun and Engaging</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
+            <div class="social-icons">
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="discord.png" alt="Discord"></a>
+                <a href="#"><img src="x.png" alt="X"></a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 RoboKitty, All rights reserved.</p>
+        </div>
     </div>
-    <h1>Welcome to RoboKitty</h1>
-    <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
-    
-    <h2>Features</h2>
-    <ul>
-      <li>AI-Driven Technology</li>
-      <li>Community-Focused</li>
-      <li>Secure and Transparent</li>
-      <li>Fun and Engaging</li>
-    </ul>
-    
-    <h2>Contact Us</h2>
-    <p>For more information, feel free to reach out to us at robokitty@tutamail.com.</p>
-    <div class="social-media">
-      <a href="#"><img src="instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="telegram.png" alt="Telegram"></a>
-      <a href="#"><img src="discord.png" alt="Discord"></a>
-      <a href="#"><img src="x.png" alt="X"></a>
-    </div>
-  </div>
-  <div class="small-robokitty">
-    <img src="small_robokitty.png" alt="Small RoboKitty">
-  </div>
 </body>
 </html>
