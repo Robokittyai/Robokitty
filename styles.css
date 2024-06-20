@@ -16,7 +16,6 @@ body {
     background: black;
     overflow: hidden;
     z-index: -1;
-    position: relative;
 }
 
 .container {
@@ -79,4 +78,5 @@ body {
     animation: matrix 1s linear infinite;
     opacity: 0.5;
 }
+
 
