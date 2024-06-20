@@ -73,19 +73,11 @@ footer {
     width: 100%;
 }
 
-.footer-social-icons img {
-    width: 20px;
-    height: auto;
-    margin: 5px;
-    display: inline-block;
-}
-
 .footer-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
 
 
