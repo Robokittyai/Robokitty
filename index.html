@@ -6,57 +6,67 @@
     <title>RoboKitty</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
             background: url('realistic_background.png') no-repeat center center fixed;
             background-size: cover;
-            color: #00FF00;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
         }
-
-        .header, .content, .footer {
-            background-color: rgba(0, 0, 0, 0.6);
+        .container {
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            margin: 20px auto;
-            width: 80%;
             border-radius: 10px;
+            margin-top: 20px;
         }
-
-        .header img {
-            width: 100px;
+        .logo {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
+            animation: blink 3s infinite;
         }
-
-        .header h1 {
+        @keyframes blink {
+            0%, 100% { box-shadow: 0 0 10px 10px green; }
+            50% { box-shadow: 0 0 5px 5px green; }
+        }
+        h1, h2, h3 {
             margin: 10px 0;
         }
-
         .features, .contact {
-            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-
-        .contact img {
-            width: 40px;
+        .social-icons img {
+            width: 50px;
+            height: 50px;
             margin: 0 10px;
-            vertical-align: middle;
         }
-
-        .footer p {
-            margin: 10px 0;
+        .social-icons a {
+            display: inline-block;
+        }
+        footer {
+            margin-top: 20px;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="small_robokitty.png" alt="RoboKitty">
+    <div class="container">
+        <img src="small_robokitty.png" alt="RoboKitty Logo" class="logo">
         <h1>Welcome to RoboKitty</h1>
         <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies.</p>
-    </div>
-    <div class="content">
-        <h2>About RoboKitty</h2>
-        <p>Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
+        <div class="about">
+            <h2>About RoboKitty</h2>
+            <p>Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
+        </div>
         <div class="features">
-            <h3>Features</h3>
+            <h2>Features</h2>
             <ul>
                 <li>AI-Driven Technology</li>
                 <li>Community-Focused</li>
@@ -65,16 +75,18 @@
             </ul>
         </div>
         <div class="contact">
-            <h3>Contact Us</h3>
+            <h2>Contact Us</h2>
             <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
-            <a href="https://instagram.com"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://telegram.org"><img src="telegram.png" alt="Telegram"></a>
-            <a href="https://discord.com"><img src="discord.png" alt="Discord"></a>
-            <a href="https://twitter.com"><img src="twitter.png" alt="Twitter"></a>
+            <div class="social-icons">
+                <a href="https://instagram.com"><img src="insta_icon.png" alt="Instagram"></a>
+                <a href="https://telegram.org"><img src="telegram_icon.png" alt="Telegram"></a>
+                <a href="https://discord.com"><img src="discord_icon.png" alt="Discord"></a>
+                <a href="https://twitter.com"><img src="twitter_icon.png" alt="Twitter"></a>
+            </div>
         </div>
     </div>
-    <div class="footer">
-        <p>© 2024 RoboKitty. All rights reserved.</p>
-    </div>
+    <footer>
+        &copy; 2024 RoboKitty. All rights reserved.
+    </footer>
 </body>
 </html>
