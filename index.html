@@ -6,51 +6,57 @@
     <title>RoboKitty</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            color: #00ff00;
             margin: 0;
+            font-family: Arial, sans-serif;
             background: url('realistic_background.png') no-repeat center center fixed;
             background-size: cover;
-        }
-        .content {
+            color: #00FF00;
             text-align: center;
+        }
+
+        .header, .content, .footer {
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            margin: 20px;
+            margin: 20px auto;
+            width: 80%;
             border-radius: 10px;
         }
-        .header, .footer {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            border-radius: 10px;
+
+        .header img {
+            width: 100px;
+            border-radius: 50%;
         }
-        h1, h2 {
-            color: #00ff00;
+
+        .header h1 {
+            margin: 10px 0;
         }
+
         .features, .contact {
             margin: 20px 0;
         }
-        .social-icons img {
+
+        .contact img {
             width: 40px;
-            height: 40px;
             margin: 0 10px;
-            transition: transform 0.3s;
+            vertical-align: middle;
         }
-        .social-icons img:hover {
-            transform: scale(1.2);
+
+        .footer p {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
     <div class="header">
+        <img src="small_robokitty.png" alt="RoboKitty">
         <h1>Welcome to RoboKitty</h1>
-        <img src="small_robokitty.png" alt="RoboKitty Logo" style="width: 100px; height: auto;">
+        <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies.</p>
     </div>
     <div class="content">
         <h2>About RoboKitty</h2>
-        <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
+        <p>Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
         <div class="features">
-            <h2>Features</h2>
+            <h3>Features</h3>
             <ul>
                 <li>AI-Driven Technology</li>
                 <li>Community-Focused</li>
@@ -59,14 +65,12 @@
             </ul>
         </div>
         <div class="contact">
-            <h2>Contact Us</h2>
+            <h3>Contact Us</h3>
             <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a>.</p>
-            <div class="social-icons">
-                <a href="#"><img src="instagram_icon.png" alt="Instagram"></a>
-                <a href="#"><img src="telegram_icon.png" alt="Telegram"></a>
-                <a href="#"><img src="discord_icon.png" alt="Discord"></a>
-                <a href="#"><img src="twitter_icon.png" alt="Twitter"></a>
-            </div>
+            <a href="https://instagram.com"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://telegram.org"><img src="telegram.png" alt="Telegram"></a>
+            <a href="https://discord.com"><img src="discord.png" alt="Discord"></a>
+            <a href="https://twitter.com"><img src="twitter.png" alt="Twitter"></a>
         </div>
     </div>
     <div class="footer">
