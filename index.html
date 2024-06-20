@@ -6,78 +6,58 @@
     <title>RoboKitty</title>
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
             background: url('realistic_background.png') no-repeat center center fixed;
             background-size: cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .container {
+            font-family: Arial, sans-serif;
             text-align: center;
+            color: limegreen;
         }
-        .title {
-            font-size: 3em;
-            margin-bottom: 0.5em;
+        h1 {
             text-shadow: 2px 2px 5px black;
         }
-        .description {
-            font-size: 1.2em;
-            margin-bottom: 1em;
-            text-shadow: 1px 1px 3px black;
-        }
-        .features, .contact {
-            margin-bottom: 1em;
-        }
-        .small-robokitty, .usd-symbol {
-            position: absolute;
-            animation: move 5s infinite;
+        .content {
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            width: 80%;
         }
         .small-robokitty {
-            top: 10%;
-            left: 10%;
-        }
-        .usd-symbol {
-            top: 70%;
-            left: 80%;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            animation: move 5s infinite;
         }
         @keyframes move {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(20px); }
-            100% { transform: translateY(0); }
+            0% { top: 10%; left: 10%; }
+            25% { top: 10%; left: 80%; }
+            50% { top: 80%; left: 80%; }
+            75% { top: 80%; left: 10%; }
+            100% { top: 10%; left: 10%; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="content">
         <img src="robokitty_logo.jpg" alt="RoboKitty Logo" style="max-width: 100%; height: auto;">
-        <div class="title">Welcome to RoboKitty</div>
-        <div class="description">
-            RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.
-        </div>
-        <div class="features">
-            <h3>Features</h3>
-            <ul>
-                <li>AI-Driven Technology</li>
-                <li>Community-Focused</li>
-                <li>Secure and Transparent</li>
-                <li>Fun and Engaging</li>
-            </ul>
-        </div>
-        <div class="contact">
-            <h3>Contact Us</h3>
-            <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a></p>
-            <div class="social-icons">
-                <a href="#"><img src="instagram.png" alt="Instagram" style="width:50px;height:50px;"></a>
-                <a href="#"><img src="telegram.png" alt="Telegram" style="width:50px;height:50px;"></a>
-                <a href="#"><img src="discord.png" alt="Discord" style="width:50px;height:50px;"></a>
-                <a href="#"><img src="x.png" alt="Twitter" style="width:50px;height:50px;"></a>
-            </div>
+        <h1>Welcome to RoboKitty</h1>
+        <p>RoboKitty is the first AI-driven meme coin designed to revolutionize the world of cryptocurrencies. Powered entirely by artificial intelligence, RoboKitty aims to provide financial solutions and bring joy to the crypto community. It's a digital asset for the people, by the AI, ensuring security and transparency in every transaction.</p>
+        <h2>Features</h2>
+        <ul>
+            <li>AI-Driven Technology</li>
+            <li>Community-Focused</li>
+            <li>Secure and Transparent</li>
+            <li>Fun and Engaging</li>
+        </ul>
+        <h2>Contact Us</h2>
+        <p>For more information, feel free to reach out to us at <a href="mailto:robokitty@tutamail.com">robokitty@tutamail.com</a></p>
+        <div class="social-icons">
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="telegram.png" alt="Telegram"></a>
+            <a href="#"><img src="discord.png" alt="Discord"></a>
+            <a href="#"><img src="x.png" alt="Twitter"></a>
         </div>
     </div>
-    <img src="small_robokitty.png" alt="Small RoboKitty" class="s
+    <img src="small_robokitty.png" alt="Small RoboKitty" class="small-robokitty">
+</body>
+</html>
