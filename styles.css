@@ -1,37 +1,71 @@
 body {
     font-family: Arial, sans-serif;
-    background: black url('realistic_background.png') no-repeat center center fixed;
+    margin: 0;
+    padding: 0;
+    background: url('realistic_background.png') no-repeat center center fixed;
     background-size: cover;
-    color: green;
+    color: #00ff00;
     text-align: center;
 }
 
-header, main, footer {
+.container {
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
-    margin: 20px auto;
-    max-width: 800px;
+    display: inline-block;
+    margin-top: 50px;
 }
 
-header h1 {
-    font-size: 3em;
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-main section {
-    margin: 20px 0;
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
 }
 
-main h2 {
-    font-size: 2em;
+p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
-#social-media img {
+.contact-icons img {
     width: 40px;
     margin: 0 10px;
+    transition: transform 0.3s;
 }
 
-footer {
-    font-size: 0.8em;
+.contact-icons img:hover {
+    transform: scale(1.1);
+}
+
+#robokitty-logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    animation: blink-animation 1.5s infinite;
+}
+
+@keyframes blink-animation {
+    0% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.5);
+    }
+    100% {
+        filter: brightness(1);
+    }
 }
