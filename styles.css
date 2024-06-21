@@ -28,10 +28,10 @@ body {
     margin: 0 auto;
     width: 200px;
     height: 200px;
-    border: 5px solid #00bfff;
+    border: 5px solid #00ff00;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 0 20px #00bfff;
+    box-shadow: 0 0 20px #00ff00;
 }
 
 .logo {
@@ -84,5 +84,3 @@ h1, h2 {
     animation: matrix 1s linear infinite;
     opacity: 0.5;
 }
-
-
