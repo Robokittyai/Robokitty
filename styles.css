@@ -21,23 +21,16 @@ body {
     position: relative;
     z-index: 1;
     text-align: center;
-    padding-top: 50px;
-}
-
-.logo-container {
-    margin: 0 auto;
-    width: 200px;
-    height: 200px;
-    border: 5px solid #00ff00;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 0 20px #00ff00;
+    padding-top: 2vw;
 }
 
 .logo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 10px solid #00bfff;
+    box-shadow: 0 0 20px #00bfff;
 }
 
 h1, h2 {
@@ -58,30 +51,14 @@ h1, h2 {
     border-radius: 10px;
     display: inline-block;
     margin-top: 20px;
+    width: 80%;
+    max-width: 800px;
 }
 
 .social-icons img {
     width: 40px;
     height: auto;
     margin: 10px;
-}
-
-/* Matrix animation */
-@keyframes matrix {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-.matrix-bg:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(data:image/png;base64,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
-    ) repeat-y center center;
-    animation: matrix 1s linear infinite;
-    opacity: 0.5;
+    filter: none;
 }
 
